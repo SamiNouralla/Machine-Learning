@@ -26,7 +26,6 @@ def load_input_data():
     
     return input_data
 
-
 def load_target_data():
     """ Load csv file containing target data and return as a numpy array
     """
@@ -40,7 +39,6 @@ def load_target_data():
 
     return target_data
 
-
 def scorer(estimator, X, y):
     """ Use squared sum as function for calculating score
     """
@@ -50,7 +48,6 @@ def scorer(estimator, X, y):
     score = ((predictions - y) ** 2).sum()  # it should return one value
     
     return score
-
 
 if __name__ == "__main__":
     input_data = load_input_data()
@@ -79,7 +76,3 @@ if __name__ == "__main__":
     expected = target_data
     print(metrics.classification_report(expected, predicted))
     print(metrics.confusion_matrix(expected, predicted))
-
-
-
-
