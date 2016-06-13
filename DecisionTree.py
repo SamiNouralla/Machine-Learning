@@ -26,7 +26,6 @@ def load_input_data():
     
     return input_data
 
-
 def load_target_data():
     """ Load csv file containing target data and return as a numpy array
     """
@@ -91,7 +90,3 @@ if __name__ == "__main__":
     tree.export_graphviz(clf, out_file=dot_data) 
     graph = pydot.graph_from_dot_data(dot_data.getvalue()) 
     graph.write_svg("iris.svg")
-
-
-
-
