@@ -66,13 +66,13 @@ if __name__ == "__main__":
     df2, targets = encode_target(df, "Overall, how satisfied are you with your program?")
     features = list(df2.columns[1:23])
 
-    #fit the decision tree
+    # Fit the decision tree
     target_data = df2["Target"]
     input_data = df2[features]
     dt = DecisionTreeClassifier(criterion='entropy',min_samples_split=5, random_state=51)
     dt.fit(input_data, target_data)
 
-    #produce graphic visualization
+    # Produce graphic visualization
     visualize_tree(dt, features) 
 
 
