@@ -52,9 +52,7 @@ def visualize_tree(tree, feature_names):
     with open("tre.svg", 'w') as f:
         export_graphviz(tree, out_file=f,
                         feature_names=feature_names)
-
     command = ["svg", "-Tpng", "tre.svg", "-o", "tre.png"]
-    
     try:
         subprocess.check_call(command)
     except:
