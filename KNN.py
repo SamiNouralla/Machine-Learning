@@ -17,7 +17,6 @@ def loadDataset(filename, split, trainingSet=[] , testSet=[]):
             else:
                 testSet.append(dataset[x])
 
-
 def euclideanDistance(instance1, instance2, length):
     """ Return the euclidean distance calculated from the two data values
     """
@@ -29,7 +28,6 @@ def euclideanDistance(instance1, instance2, length):
 	distance += pow((instance1[x] - instance2[x]), 2)
 	squareroot= distance**(1/2)
     return squareroot
-
 
 def getNeighbors(trainingSet, testInstance, k):
     """ Return k neighbours from the trainingSet that are closest to testInstance
@@ -51,7 +49,6 @@ def getNeighbors(trainingSet, testInstance, k):
 	
     return neighbors
 
-
 def getResponse(neighbors):
     """ Return class of neighbor with highest occurance
     """
@@ -69,7 +66,6 @@ def getResponse(neighbors):
     
     return sortedVotes[0][0]
 
-
 def getAccuracy(testSet, predictions):
     """ Return the accuracy of the predictions from the classifier
     """
@@ -79,7 +75,6 @@ def getAccuracy(testSet, predictions):
 	if testSet[x][-1] == predictions[x]:
 	    correct += 1
     return (correct/float(len(testSet))) * 100.0
-
 
 if __name__ == "__main__":
     # Prepare data
@@ -104,4 +99,3 @@ if __name__ == "__main__":
     accuracy = getAccuracy(testSet, predictions)
     print('Accuracy: ' + repr(accuracy) + '%')
 	
-
