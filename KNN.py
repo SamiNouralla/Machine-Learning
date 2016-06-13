@@ -21,7 +21,7 @@ def euclideanDistance(instance1, instance2, length):
     """ Return the euclidean distance calculated from the two data values
     """
 
-    # Euclidea distance is the square root of the two data value squared
+    # Euclidean distance is the square root of the two data value squared
     global squareroot
     distance = 0
     for x in range(length):
