@@ -31,17 +31,8 @@ def get_iris_data():
 
 def encode_target(df, target_column):
     """Add column to df with integers for the target.
-
-    Args
-    ----
     df -- pandas DataFrame.
-    target_column -- column to map to int, producing
-                     new Target column.
-
-    Returns
-    -------
-    df_mod -- modified DataFrame.
-    targets -- list of target names.
+    target_column -- column to map to int, producing new Target column.
     """
     
     df_mod = df.copy()
@@ -54,10 +45,7 @@ def encode_target(df, target_column):
 
 def visualize_tree(tree, feature_names):
     """Create tree png using graphviz.
-
-    Args
-    ----
-    tree -- scikit-learn DecsisionTree.
+    tree -- scikit-learn DecisionTree.
     feature_names -- list of feature names.
     """
     
