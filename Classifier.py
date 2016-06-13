@@ -28,7 +28,6 @@ def get_iris_data():
             
     return df
 
-
 def encode_target(df, target_column):
     """Add column to df with integers for the target.
     df -- pandas DataFrame.
@@ -41,7 +40,6 @@ def encode_target(df, target_column):
     df_mod["Target"] = df_mod[target_column].replace(map_to_int)
     
     return (df_mod, targets)
-
 
 def visualize_tree(tree, feature_names):
     """Create tree png using graphviz.
@@ -74,5 +72,3 @@ if __name__ == "__main__":
 
     # Produce graphic visualization
     visualize_tree(dt, features) 
-
-
